@@ -1,0 +1,236 @@
+.offpage {
+  position: absolute;
+  left: -1000px;
+}
+
+body>a:focus {
+  /* need below line to make the tab separate from top element workable with scroll-snapping */
+  scroll-snap-align: start;
+  position: relative;
+  left: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding: 50px;
+}
+
+section {
+  scroll-snap-align: start;
+  width: 100%;
+  text-align: left;
+  padding-top: 90px;   /*dirty solution to give some space for header-mini to sit on, when snap point is on scroll-container*/
+}
+
+section>h1 {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.scroll-container {
+  scroll-snap-align: end;
+  /*height: 100vh;*/
+  overflow-y: auto;
+}
+
+/*sticky-faded-top is not needed if the class header-mini is implemented with box shadow*/
+.scroll-container>.sticky-faded-top {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 15px;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+}
+
+#pageName {
+  grid-area: identity;
+  align-self: center;
+  text-align: left;
+  font-size: min(8vw, 70px);
+  white-space: nowrap;
+}
+
+#myPortrait {
+  grid-area: pic;
+  width: 75%;
+  border: 1px solid black;
+  max-width: 420px;
+}
+
+#titles {
+  grid-area: title;
+}
+
+.header-full {
+  background-color: white;
+  height: 100vh;
+  scroll-snap-align: start;
+  width: 100%;
+  text-align: center;
+}
+
+.header-full.grid-container {
+  display: grid;
+
+  grid:
+    '. identity .'
+    'pic pic pic'
+    'title title title';
+
+  justify-items: center;
+}
+
+.fa-google-scholar {
+  color: #4889F4;
+}
+
+.fa-linkedin {
+  color: #0A66C2;
+}
+
+.header-mini {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.header-mini.grid-container {
+  display: grid;
+  height: auto;
+  max-height: none;
+  grid-template-columns: auto 1fr;
+  grid:
+    'pic identity'
+    'pic title';
+  justify-items: center;
+}
+
+.header-mini.grid-container>#myPortrait {
+  width: auto;
+  height: clamp(90px, 11.5vh, 150px);
+  /*not dynamic, need to improve*/
+}
+
+.header-mini.grid-container>#pageName {
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.1;
+}
+
+.header-mini.grid-container>#titles {
+  padding-right: 1.5em;
+  /* font-size: calc((12.5vh - 1.5*2.5vh)/5); */
+  /* very dirty solution, need to improve */
+  font-size: clamp(12px, 1.2vw, 16px);
+  line-height: 1.2;
+}
+
+#cv>.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cv>a {
+  scroll-snap-align: start;
+  display: block;
+  margin: 10px;
+}
+
+nav {
+  height: 8vh;
+  width: 100%;
+  position: sticky;
+  /* this allows whatever content at the end of the page appearing at the bottom of the nav bar */
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+#back-to-top {
+  grid-area: btt;
+  text-align: left;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+#navbar {
+  grid-area: navbar;
+}
+
+nav.grid-container {
+  display: grid;
+  grid:
+    '. . . btt'
+    'navbar navbar navbar navbar';
+}
+
+nav>ul.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.nav-item {
+  list-style-type: none;
+  /* do not set parent padding; set it in child element so the clickable area is the same size as the button */
+  /* padding: 10px; */
+  border: 1px solid black;
+  background-color: white;
+  /* flex-grow: 1 to make flex items grow into full-width
+  Source: https://stackoverflow.com/questions/50455838/flexbox-not-full-width */
+  flex-grow: 1;
+}
+
+.nav-item a {
+  display: block;
+  padding: 10px;
+}
+
+.nav-item a:hover {
+  background-color: #5f5f5f;
+}
+
+.nav-item a:link,
+.nav-item a:visited {
+  color: black;
+}
+
+.nav-item.active {
+  background-color: black;
+}
+
+.nav-item.active a {
+  color: white;
+}
+
+#copyright {
+  scroll-snap-align: end;
+}
+
+footer#copyright {
+  margin-top: 6px;
+}
+
+/* section font sizing */
+
+.SectionDescription {
+  font-size: 1.3em;
+}
+
+section li {
+  font-size: 1.15em;
+}

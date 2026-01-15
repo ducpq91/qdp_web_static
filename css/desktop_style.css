@@ -1,0 +1,42 @@
+.header-full.grid-container {
+  /* rows scale with viewport height */
+  grid-template-rows: minmax(56px, 0.9fr) minmax(220px, 2.2fr) minmax(140px, 1.2fr);
+  row-gap: 16px;
+}
+
+.header-full.grid-container>#myPortrait {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+#pageName { 
+  font-size: clamp(2rem, 10vmin, 5rem);
+}
+
+#titles { 
+  font-size: clamp(0.1rem, 2.5vmin, 1.4rem);
+}
+
+.header-mini.grid-container {
+  column-gap: 12px;
+}
+
+.header-mini.grid-container>#myPortrait {
+  justify-self: end;
+  height: clamp(100px, 10vw, 200px);
+}
+
+.header-mini.grid-container>#pageName,
+.header-mini.grid-container>#titles {
+  justify-self: start;
+}
+
+nav {
+  height: auto;
+}
+
+nav>ul.flex-container {
+  margin: 0;
+  margin-bottom: 1px;
+}
