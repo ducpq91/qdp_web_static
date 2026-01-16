@@ -86,7 +86,7 @@ section>h1 {
 
 .header-full {
   background-color: white;
-  height: 100svh;
+  height: 100vh;
   scroll-snap-align: start;
   width: 100%;
   text-align: center;
@@ -143,7 +143,7 @@ section>h1 {
 
 .header-mini.grid-container>#myPortrait {
   width: auto;
-  height: clamp(90px, 11.5svh, 150px);
+  height: clamp(90px, 11.5vh, 150px);
   /*not dynamic, need to improve*/
 }
 
@@ -173,7 +173,7 @@ section>h1 {
 }
 
 nav {
-  height: 8svh;
+  height: 8vh;
   width: 100%;
   position: sticky;
   /* this allows whatever content at the end of the page appearing at the bottom of the nav bar */
@@ -265,10 +265,3 @@ section li {
   font-size: 2em;
   margin-block: 0.67em;
 }
-
-/* for Firefox mobile app */
-
-.grid-container > * { min-width: 0; }
-.flex-container > * { min-width: 0; }
-
-#titles, #navbar { min-width: 0; }
