@@ -297,5 +297,19 @@ nav{ min-height: 8vh; height: auto; }
     html {
 	  font-size: x-small;
     }
+	
+	.header-mini.grid-container {
+	  grid-template-columns: 1fr 1fr;
+	}
+	
+	.header-mini.grid-container > #myPortrait {
+	  height: clamp(90px,110px,150px);
+	}
+	
+	.header-mini.grid-container > #titles {
+	  line-height: 1.2;
+	  padding-right: 1.5em;
+	  font-size: clamp(6px, 7px, 16px);
+	}
   }
 }
