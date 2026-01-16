@@ -293,6 +293,5 @@ nav.grid-container > * { min-width: 0; }
 nav{ min-height: 8vh; height: auto; }
 
 html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  font-size: x-small;
 }
