@@ -1,6 +1,19 @@
-.offpage {
+/*.offpage {
   position: absolute;
   left: -1000px;
+}*/
+.offpage {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.offpage:focus {
+  top: 0;
 }
 
 body>a:focus {
@@ -233,4 +246,9 @@ footer#copyright {
 
 section li {
   font-size: 1.15em;
+}
+
+:where(h1) {
+  font-size: 2em;
+  margin-block: 0.67em;
 }
