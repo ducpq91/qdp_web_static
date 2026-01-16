@@ -184,9 +184,10 @@ nav {
 
 #back-to-top {
   grid-area: btt;
-  text-align: left;
-  font-size: 0.8em;
+  font-size: 0.9em;
   white-space: nowrap;
+  background-color: #ffe1004a;
+  justify-self: end;
 }
 
 #navbar {
