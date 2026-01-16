@@ -294,7 +294,6 @@ nav{ min-height: 8vh; height: auto; }
 
 @supports (-moz-appearance: none) {
   html {
-    -moz-text-size-adjust: none;
-    text-size-adjust: none;
+    font-size: x-small;
   }
 }
