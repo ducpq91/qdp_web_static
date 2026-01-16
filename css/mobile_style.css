@@ -95,6 +95,12 @@ section>h1 {
     'title title title';
 
   justify-items: center;
+  grid-template-rows: 0.8fr 1fr 2fr;
+  align-items: center;
+}
+
+.header-full.grid-container>#titles {
+  transform: translateY(-50px);
 }
 
 .fa-google-scholar {
