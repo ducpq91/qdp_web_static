@@ -293,7 +293,9 @@ nav.grid-container > * { min-width: 0; }
 nav{ min-height: 8vh; height: auto; }
 
 @supports (-moz-appearance: none) {
-  html {
-    font-size: x-small;
+  @media (max-width: 768px) and (pointer: coarse) {
+    html {
+	  font-size: x-small;
+    }
   }
 }
