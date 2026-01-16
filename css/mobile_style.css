@@ -302,14 +302,18 @@ nav{ min-height: 8vh; height: auto; }
 	  grid-template-columns: 1fr 1fr;
 	}
 	
+	.header-mini.grid-container > #pageName {
+	  padding-right: 1em;
+	}
+	
 	.header-mini.grid-container > #myPortrait {
 	  height: clamp(90px,110px,150px);
 	}
 	
 	.header-mini.grid-container > #titles {
-	  line-height: 1.2;
+	  line-height: 1.5;
 	  padding-right: 1.5em;
-	  font-size: clamp(6px, 7px, 16px);
+	  font-size: clamp(7px, 9px, 16px);
 	}
   }
 }
