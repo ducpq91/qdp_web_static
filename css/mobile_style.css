@@ -269,6 +269,9 @@ section li {
 
 /* test some fixes for Firefox Android */
 
+/* fix a problem where navbar child elements overflow <body> and offset body to the left of the viewport */
+/* copy-paste from chatGPT suggestions; there might be redundancy */
+
 nav.grid-container > * { min-width: 0; }
 
 #back-to-top{
@@ -291,6 +294,8 @@ nav.grid-container > * { min-width: 0; }
 }
 
 nav{ min-height: 8vh; height: auto; }
+
+/* fix a problem where font size is inflated on Firefox Android, but not elsewhere (Chrome, Opera, Firefox Desktop, etc.) */
 
 @supports (-moz-appearance: none) {
   @media (max-width: 768px) and (pointer: coarse) {
