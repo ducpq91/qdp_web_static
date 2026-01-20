@@ -146,7 +146,18 @@ function init() {
     // }
     // TO-DO: wrap the above code in a media query, so as to implement a different desktop layout and behavior
     // e.g., disable header-mini on desktop view, and left-dock header-full (always in view), and sections on its right scroll up and down to view.
+	
+	const user = "quangduc.pham";
+	const domain = "cunef.edu";
+	const email = `${user}@${domain}`;
+
+	const el = document.getElementById("thudientu");
+	if (el) {
+	  el.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+	}
 }
+
+
 
 // Add event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', init);
